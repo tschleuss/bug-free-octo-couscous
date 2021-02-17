@@ -2,6 +2,8 @@
 
 A little info about your project and/ or overview that explains **what** the project is about. 
 
+> Don’t get lazy just because this is for developers
+
 - [Motivation](#motivation)
 - [Build Status](#build-status)
 - [Before You Begin](#before-you-begin)
