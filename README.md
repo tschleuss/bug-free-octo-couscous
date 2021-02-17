@@ -76,7 +76,7 @@ To configure **<PROJECT_NAME>**, follow these steps:
 
 These sections are optional. If present, they should address questions that are asked frequently (this will save you time in the future). Outline common problems that developers encounter along with solutions (links are okay if the steps are long, but it is often helpful to provide a summary since links sometimes go stale). Ex. -
 
-##### Can't Stop all Docker Containers
+#### Can't Stop all Docker Containers
 
 When attempting to stop docker containers if you are getting the error:
 
