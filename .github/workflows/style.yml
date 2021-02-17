@@ -1,0 +1,35 @@
+name: Style Checks
+
+on: pull_request
+
+jobs:
+  rubocop:
+    name: runner / rubocop
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v1
+
+      - name: rubocop
+        uses: reviewdog/action-rubocop@v1
+        with:
+          rubocop_version: 0.88
+          rubocop_extensions: rubocop-performance:1.5.1 rubocop-minitest rewind-ruby-style
+          github_token: ${{ secrets.github_token }}
+          filter_mode: file
+          fail_on_error: true
+
+  brakeman:
+    name: runner / brakeman
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v1
+
+      - name: brakeman
+        uses: reviewdog/action-brakeman@v1
+        with:
+          brakeman_version: 4.8.2
+          github_token: ${{ secrets.github_token }}
+          filter_mode: file
+          fail_on_error: true
